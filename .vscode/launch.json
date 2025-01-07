@@ -34,6 +34,32 @@
             ],
             "subProcess": false,
             "justMyCode": false
+        },
+        {
+            "name": "fairseq_generate",
+            "type": "python",
+            "pythonPath": "${env:CONDA_PREFIX}/bin/python",
+            "request": "launch",
+            "program": "${workspaceFolder}/fairseq-0.10.2/fairseq_cli/generate.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--user-dir", "${workspaceFolder}/mass", 
+                "--task", "xmasked_seq2seq",
+                "--source-langs","melody","--target-langs", "lyric",
+                "--langs","lyric,melody",
+                "--source-lang","melody", "--target-lang", "lyric",
+                "--mt_steps", "melody-lyric", 
+                "--gen-subset", "train",
+                "--beam", "5",
+                "--nbest", "5",
+                "--remove-bpe", 
+                "--max-len-b", "500",
+                "--no-early-stop",
+                "--path", "${workspaceFolder}/checkpoints/checkpoint_best.pt",
+                "--sampling"
+            ],
+            "subProcess": false,
+            "justMyCode": false
         }
     ]
 }

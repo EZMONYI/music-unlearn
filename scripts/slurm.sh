@@ -13,7 +13,7 @@ source ~/miniconda3/etc/profile.d/conda.sh
 conda activate unlearn 
 
 # Run your bash script
-data_dir=lmd_data/processed # The path of binarized data
+data_dir=data/lmd_data/processed # The path of binarized data
 user_dir=mass
 tensor_log=runs
 
@@ -38,4 +38,6 @@ fairseq-train $data_dir \
   --share-decoder-input-output-embed \
   --valid-lang-pairs lyric-lyric,melody-melody \
   --no-epoch-checkpoints \
-  --skip-invalid-size-inputs-valid-test
+  --skip-invalid-size-inputs-valid-test \
+  --reload-checkpoint $ckpt \
+  --distributed-world-size 1

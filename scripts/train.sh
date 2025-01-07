@@ -1,6 +1,6 @@
 #!/bin/bash
 
-data_dir=${1:-"lmd_data/processed"} # The path of binarized data
+data_dir=${1:-"data/lmd_data/processed"} # The path of binarized data
 user_dir=${2:-"mass"}
 ckpt=${3:-"checkpoints/songmass.pth"}
 
@@ -25,4 +25,5 @@ fairseq-train $data_dir \
   --valid-lang-pairs lyric-lyric,melody-melody \
   --no-epoch-checkpoints \
   --skip-invalid-size-inputs-valid-test \
-  --reload-checkpoint $ckpt
+  --reload-checkpoint $ckpt \
+  --distributed-world-size 1

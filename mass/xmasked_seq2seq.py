@@ -413,7 +413,7 @@ class UnlearnXMassTranslationTask(FairseqTask):
                 sample[sample_key]['net_input']['src_key'] = src_key
                 sample[sample_key]['net_input']['tgt_key'] = tgt_key
 
-                loss, sample_size, logging_output = criterion(model, sample[sample_key])
+                loss, sample_size, logging_output = criterion(model, self.teacher, sample[sample_key])
 
                 agg_loss += loss.data.item()
                 agg_sample_size += sample_size

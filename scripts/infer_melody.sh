@@ -1,10 +1,10 @@
 #!/bin/bash
 
-data_dir=${1:-"data_org/processed"}
-user_dir=${2:-"mass"}
-model=${3:-"Model path"}
+data_dir=${1:-"../data/lmd_data/processed"}
+user_dir=${2:-"../mass"}
+model=${3:-"../checkpoints/checkpoint_best.pt"}
 
-fairseq-generate $data_dir \
+python ../fairseq-0.10.2/fairseq_cli/generate.py $data_dir \
   --user-dir $user_dir \
   --task xmasked_seq2seq \
   --source-langs lyric --target-langs melody \
