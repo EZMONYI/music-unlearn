@@ -1,0 +1,32 @@
+Namespace(no_progress_bar=False, log_interval=100, log_format=None, tensorboard_logdir=None, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, min_loss_scale=0.0001, threshold_loss_scale=None, user_dir=None, empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, checkpoint_suffix='', checkpoint_shard_count=1, quantization_config_path=None, profile=False, criterion='cross_entropy', tokenizer=None, bpe=None, optimizer=None, lr_scheduler='fixed', scoring='bleu', task='cross_lingual_lm', source_lang='lyric', target_lang=None, trainpref='lmd_data//mono//unlearn', validpref='lmd_data//mono//valid', testpref=None, align_suffix=None, destdir='lmd_data//processed/', thresholdtgt=0, thresholdsrc=0, tgtdict=None, srcdict='lmd_data//mono//dict.lyric.txt', nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=False, only_source=True, padding_factor=8, workers=20)
+[lyric] Dictionary: 21904 types
+[lyric] lmd_data//mono//unlearn.lyric: 345 sents, 57615 tokens, 0.566% replaced by <unk>
+[lyric] Dictionary: 21904 types
+[lyric] lmd_data//mono//valid.lyric: 679 sents, 110640 tokens, 0.611% replaced by <unk>
+Wrote preprocessed data to lmd_data//processed/
+Namespace(no_progress_bar=False, log_interval=100, log_format=None, tensorboard_logdir=None, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, min_loss_scale=0.0001, threshold_loss_scale=None, user_dir=None, empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, checkpoint_suffix='', checkpoint_shard_count=1, quantization_config_path=None, profile=False, criterion='cross_entropy', tokenizer=None, bpe=None, optimizer=None, lr_scheduler='fixed', scoring='bleu', task='cross_lingual_lm', source_lang='melody', target_lang=None, trainpref='lmd_data//mono//unlearn', validpref='lmd_data//mono//valid', testpref=None, align_suffix=None, destdir='lmd_data//processed/', thresholdtgt=0, thresholdsrc=0, tgtdict=None, srcdict='lmd_data//mono//dict.melody.txt', nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=False, only_source=True, padding_factor=8, workers=20)
+[melody] Dictionary: 152 types
+[melody] lmd_data//mono//unlearn.melody: 345 sents, 107145 tokens, 0.0% replaced by <unk>
+[melody] Dictionary: 152 types
+[melody] lmd_data//mono//valid.melody: 679 sents, 206157 tokens, 0.0% replaced by <unk>
+Wrote preprocessed data to lmd_data//processed/
+Namespace(no_progress_bar=False, log_interval=100, log_format=None, tensorboard_logdir=None, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, min_loss_scale=0.0001, threshold_loss_scale=None, user_dir='mass', empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, checkpoint_suffix='', checkpoint_shard_count=1, quantization_config_path=None, profile=False, criterion='cross_entropy', tokenizer=None, bpe=None, optimizer=None, lr_scheduler='fixed', scoring='bleu', task='xmasked_seq2seq', source_lang='lyric', target_lang='melody', trainpref='lmd_data//para//unlearn', validpref='lmd_data//para//valid', testpref=None, align_suffix=None, destdir='lmd_data//processed/', thresholdtgt=0, thresholdsrc=0, tgtdict='lmd_data//para//dict.melody.txt', srcdict='lmd_data//para//dict.lyric.txt', nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=False, only_source=False, padding_factor=8, workers=1)
+[lyric] Dictionary: 21904 types
+[lyric] lmd_data//para//unlearn.lyric: 345 sents, 57615 tokens, 0.566% replaced by <unk>
+[lyric] Dictionary: 21904 types
+[lyric] lmd_data//para//valid.lyric: 679 sents, 110640 tokens, 0.611% replaced by <unk>
+[melody] Dictionary: 152 types
+[melody] lmd_data//para//unlearn.melody: 345 sents, 107145 tokens, 0.0% replaced by <unk>
+[melody] Dictionary: 152 types
+[melody] lmd_data//para//valid.melody: 679 sents, 206157 tokens, 0.0% replaced by <unk>
+Wrote preprocessed data to lmd_data//processed/
+Namespace(no_progress_bar=False, log_interval=100, log_format=None, tensorboard_logdir=None, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, min_loss_scale=0.0001, threshold_loss_scale=None, user_dir='mass', empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, checkpoint_suffix='', checkpoint_shard_count=1, quantization_config_path=None, profile=False, criterion='cross_entropy', tokenizer=None, bpe=None, optimizer=None, lr_scheduler='fixed', scoring='bleu', task='xmasked_seq2seq', source_lang='melody', target_lang='lyric', trainpref='lmd_data//para//unlearn', validpref='lmd_data//para//valid', testpref=None, align_suffix=None, destdir='lmd_data//processed/', thresholdtgt=0, thresholdsrc=0, tgtdict='lmd_data//para//dict.lyric.txt', srcdict='lmd_data//para//dict.melody.txt', nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=False, only_source=False, padding_factor=8, workers=1)
+[melody] Dictionary: 152 types
+[melody] lmd_data//para//unlearn.melody: 345 sents, 107145 tokens, 0.0% replaced by <unk>
+[melody] Dictionary: 152 types
+[melody] lmd_data//para//valid.melody: 679 sents, 206157 tokens, 0.0% replaced by <unk>
+[lyric] Dictionary: 21904 types
+[lyric] lmd_data//para//unlearn.lyric: 345 sents, 57615 tokens, 0.566% replaced by <unk>
+[lyric] Dictionary: 21904 types
+[lyric] lmd_data//para//valid.lyric: 679 sents, 110640 tokens, 0.611% replaced by <unk>
+Wrote preprocessed data to lmd_data//processed/
