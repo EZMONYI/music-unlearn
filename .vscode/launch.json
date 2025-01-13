@@ -43,6 +43,7 @@
             "program": "${workspaceFolder}/fairseq-0.10.2/fairseq_cli/generate.py",
             "console": "integratedTerminal",
             "args": [
+                "${workspaceFolder}/data/lmd_data/processed",
                 "--user-dir", "${workspaceFolder}/mass", 
                 "--task", "xmasked_seq2seq",
                 "--source-langs","melody","--target-langs", "lyric",
@@ -57,6 +58,20 @@
                 "--no-early-stop",
                 "--path", "${workspaceFolder}/checkpoints/checkpoint_best.pt",
                 "--sampling"
+            ],
+            "subProcess": false,
+            "justMyCode": false
+        },
+        {
+            "name": "eval_wer",
+            "type": "python",
+            "pythonPath": "${env:CONDA_PREFIX}/bin/python",
+            "request": "launch",
+            "program": "${workspaceFolder}/evaluate/eval_wer.py",
+            "console": "integratedTerminal",
+            "args": [
+                "-i", "${workspaceFolder}/results/unlearn/lyric.inf",
+                "-r", "${workspaceFolder}/results/unlearn/lyric.ref"
             ],
             "subProcess": false,
             "justMyCode": false
